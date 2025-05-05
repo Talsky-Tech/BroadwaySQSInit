@@ -47,7 +47,7 @@ defmodule BroadwaySQSInit.MixProject do
   defp package do
     %{
       name: "broadway_sqs_init",
-      files: ~w(lib mix.exs README.md LICENSE CHANGELOG src),
+      files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/Talsky-Tech/broadway_sqs_init"}
     }

@@ -40,7 +40,7 @@ defmodule BroadwaySQSInit.MixProject do
     [
       main: "BroadwaySQSInit",
       source_ref: "v#{@version}",
-      source_url: "https://github.com/Talsky-Tech/broadway_sqs_init",
+      source_url: "https://github.com/Talsky-Tech/BroadwaySQSInit",
     ]
   end
 
@@ -49,7 +49,7 @@ defmodule BroadwaySQSInit.MixProject do
       name: "broadway_sqs_init",
       files: ~w(lib mix.exs README.md LICENSE CHANGELOG.md),
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/Talsky-Tech/broadway_sqs_init"}
+      links: %{"GitHub" => "https://github.com/Talsky-Tech/BroadwaySQSInit"}
     }
   end
 end

@@ -11,8 +11,8 @@ defmodule BroadwaySQSInit do
   ## Parameters
     - opts: A map containing:
       - `:queue_name` (required): The name of the SQS queue.
-      - `:aws_config` (required): A map with AWS credentials (`access_key_id`, `secret_access_key`, `region`).
       - `:queue_attributes` (optional): A map of queue attributes (e.g., `fifo_queue: true`).
+      - `:aws_config` (required): A keyword list with AWS credentials (`access_key_id`, `secret_access_key`, `region`).
 
   ## Returns
     - The queue URL as a string.
@@ -24,12 +24,12 @@ defmodule BroadwaySQSInit do
       queue_url = BroadwaySQSInit.ensure_queue_exists(
         "my_queue.fifo",
         %{fifo_queue: true, content_based_deduplication: true},
-        %{
+        [
           access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
           secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
           region: "us-east-1"
-        }
-      })
+        ]
+      )
 
       Broadway.start_link(MyBroadway,
         name: MyBroadway,
